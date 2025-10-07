@@ -17,7 +17,8 @@
           --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
           --mono: "Space Mono", monospace;
-          --sans: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+          --font-heading: 'Playfair Display', serif;
+          --font-body: 'Poppins', sans-serif;
         }
 
         * { box-sizing: border-box; }
@@ -26,7 +27,7 @@
           margin: 0;
           color: var(--text);
           background: var(--bg);
-          font-family: var(--sans);
+          font-family: var(--font-body);
           line-height: 1.6;
           text-rendering: optimizeLegibility;
           overflow-x: hidden;
@@ -95,8 +96,6 @@
         }
         .cta:hover, .cta:focus { background: #0c7cd5; transform: translateY(-2px); box-shadow: var(--shadow-lg); }
 
-      
-
         /* Nav Close Button */
         .nav-close {
           display: none !important;
@@ -113,12 +112,11 @@
           line-height: 1;
         }
 
-        
-
         /* Hero */
         .hero { 
           padding: 100px 0 80px; 
-          background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue)); color: var(--bg); text-align: center; padding: 80px 0;
+          text-align:center; padding: 80px 0;
+          background-color: teal;
           text-align: center;
           position: relative;
           width: 100%;
@@ -128,7 +126,8 @@
           padding-left: 20px;
           padding-right: 20px;
         }
-        .hero h1 { font-size: 3.5rem; line-height: 1.2; margin: 0 0 20px; color: var(--bg); }
+
+        .hero h1 { font-size: 3.5rem; line-height: 1.2; margin: 0 0 20px; color: var(--bg); font-family: var(--font-heading); }
         .lead { font-size: 1.25rem; color: var(--bg); margin: 0 0 30px; }
         .hero-actions { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin: 40px 0; }
         .hero-stats { display: flex; gap: 40px; justify-content: center; margin: 40px 0; flex-wrap: wrap; }
@@ -139,12 +138,13 @@
         /* Buttons */
         .button {
           display: inline-flex; align-items: center; justify-content: center;
-          border: 2px solid var(--accent-pink); color: var(--accent-pink); background: transparent;
+          border: 2px solid var(--accent-pink); color:white; background: transparent;
           padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: 500;
           transition: all 0.3s ease;
+          background-color: var(--accent-pink);
         }
         .button:hover, .button:focus { background: var(--accent-pink); color: var(--bg); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-        .button.primary { background: var(--accent-blue); color: var(--bg); border-color: var(--accent-blue); }
+        .button.primary { background: var(--accent-pink); color: var(--bg);  }
         .button.primary:hover { background: #0c7cd5; border-color: #0c7cd5; }
 
         /* Video/Banner Section */
@@ -159,14 +159,14 @@
           padding-left: 20px;
           padding-right: 20px;
         }
-        .banner-section h2 { color: var(--bg); margin-bottom: 20px; }
+        .banner-section h2 { color: var(--bg); margin-bottom: 20px; font-family: var(--font-heading); }
         .banner-section p { font-size: 1.2rem; margin-bottom: 30px; }
         .banners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .banner-item { background: linear-gradient(135deg, var(--accent-pink), var(--accent-blue)); color: var(--bg); border-radius: 12px; height: 200px; display: flex; align-items: center; justify-content: center; color: var(--bg); font-weight: bold; }
 
         /* Sections */
         .section { padding: 80px 0; }
-        .section h2 { font-size: 2.5rem; margin: 0 0 20px; text-align: center; color: var(--text); }
+        .section h2 { font-size: 2.5rem; margin: 0 0 20px; text-align: center; color: var(--text); font-family: var(--font-heading); }
         .subhead { color: var(--text-muted); margin: 0 0 40px; text-align: center; font-size: 1.1rem; }
 
         /* Services Grid */
@@ -184,7 +184,7 @@
           padding: 20px;
         }
         .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--accent-pink); }
-        .service-title { font-size: 1.5rem; margin: 0 0 15px; color: var(--text); }
+        .service-title { font-size: 1.5rem; margin: 0 0 15px; color: var(--text); font-family: var(--font-heading); }
         .service-desc { color: var(--text-muted); margin: 0 0 20px; }
         .service-btn { 
           background: var(--accent-pink); color: var(--bg); padding: 10px 20px; border-radius: 20px; text-decoration: none; 
@@ -197,7 +197,7 @@
         .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .featured-card { border: 2px solid var(--accent-pink); border-radius: 12px; padding: 30px; text-align: center; box-shadow: var(--shadow); transition: all 0.3s ease; }
         .featured-card:hover { transform: translateY(-5px); }
-        .featured-title { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent-blue); }
+        .featured-title { font-size: 1.2rem; margin-bottom: 10px; color: var(--accent-blue); font-family: var(--font-heading); }
         .featured-desc { color: var(--text-muted); }
 
         /* Active Projects - Adapted to Services or Testimonials */
@@ -212,7 +212,7 @@
           padding-left: 20px;
           padding-right: 20px;
         }
-        .active-section h2 { color: var(--bg); margin-bottom: 20px; }
+        .active-section h2 { color: var(--bg); margin-bottom: 20px; font-family: var(--font-heading); }
         .active-section p { font-size: 1.2rem; margin-bottom: 30px; }
         .active-grid { 
           max-width: 1200px; 
@@ -222,18 +222,15 @@
           gap: 30px; 
         }
         .active-card { background: var(--bg); border: 2px solid var(--accent-blue); border-radius: 12px; padding: 20px; text-align: center; box-shadow: var(--shadow); }
-        .active-title { font-size: 1.2rem; margin-bottom: 10px; }
+        .active-title { font-size: 1.2rem; margin-bottom: 10px; font-family: var(--font-heading); }
         .active-phase { color: var(--accent-pink); font-weight: bold; margin-bottom: 10px; }
         .active-desc { color: var(--text-muted); margin-bottom: 15px; }
-        .progress { background: var(--border); height: 10px; border-radius: 5px; overflow: hidden; margin: 10px 0; }
-        .progress-bar { background: var(--accent-blue); height: 100%; transition: width 0.3s ease; }
-        .progress-text { font-size: 0.9rem; color: var(--text-muted); }
 
         /* About Section */
         .about-section { 
           padding: 80px 0; 
           text-align: center; 
-          background: var(--bg); 
+          background: var(--accent-pink); 
           width: 100%;
           max-width: none;
           margin: 0;
@@ -243,6 +240,51 @@
         .about-content { max-width: 1200px; margin: 0 auto; }
         .about-badges { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
         .badge { background: var(--accent-blue); color: var(--bg); padding: 10px 20px; border-radius: 20px; font-weight: 500; }
+        .about-profile {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 20px;
+          max-width: 1200px;
+          margin: 40px auto 0;
+        }
+        .about-profile-card {
+          background: var(--bg);
+          border: 2px solid var(--accent-blue);
+          border-radius: 12px;
+          padding: 20px;
+          width: 50%;
+          box-shadow: var(--shadow);
+          
+          /* ✨ Allow height to expand based on content */
+          height: auto;
+          min-height: 400px;
+          overflow: visible;
+        }
+        .about-profile-card h3 {
+          font-weight: bold;
+          margin: 0 0 15px;
+          color: var(--text);
+          font-family: var(--font-heading);
+        }
+        .about-profile-image {
+          width: 50%;
+          border: 2px solid var(--accent-blue);
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: var(--shadow);
+
+          /* ✨ Automatically scale height with card if needed */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .about-profile-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;  /* 🔥 Show the full image without cropping */
+          display: block;
+        }
 
         /* CTA Section */
         .cta-section {
@@ -253,7 +295,7 @@
           padding-left: 20px;
           padding-right: 20px;
         }
-        .cta-section h2 { color: var(--bg); margin-bottom: 20px; }
+        .cta-section h2 { color: var(--bg); margin-bottom: 20px; font-family: var(--font-heading); }
         .cta-section p { font-size: 1.2rem; margin-bottom: 30px; }
 
         /* Values */
@@ -290,6 +332,7 @@
           font-size: 1.5rem;
           margin: 0 0 10px;
           color: var(--text);
+          font-family: var(--font-heading);
         }
         .map-card p {
           margin: 5px 0;
@@ -299,6 +342,7 @@
           font-size: 2.5rem;
           margin: 0 0 20px;
           color: var(--text);
+          font-family: var(--font-heading);
         }
         .map-iframe {
           width: 100%;
@@ -311,7 +355,7 @@
         .footer-inner {
           display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;
         }
-        .footer-section h4 { font-size: 1.2rem; margin-bottom: 20px; color: var(--accent-pink); }
+        .footer-section h4 { font-size: 1.2rem; margin-bottom: 20px; color: var(--accent-pink); font-family: var(--font-heading); }
         .footer-section ul { list-style: none; }
         .footer-section ul li { margin-bottom: 10px; }
         .footer-section ul li a { color: var(--bg); text-decoration: none; transition: color 0.3s ease; opacity: 0.8; }
@@ -345,6 +389,8 @@
           .brand img { max-width: 180px; }
           .nav-main { gap: 40px; }
           .nav-main a { font-size: 1.1rem; }
+          .about-profile { gap: 40px; }
+          .about-profile-card, .about-profile-image { height: auto; min-height: 300px; }
         }
 
         /* Laptop: Medium-large screens (1024px - 1199px) */
@@ -360,6 +406,8 @@
           .brand { font-size: 26px; }
           .brand img { max-width: 160px; }
           .nav-main { gap: 35px; }
+          .about-profile { gap: 30px; }
+          .about-profile-card, .about-profile-image { height: auto; min-height: 300px; }
         }
 
         /* Tablet: Medium screens (768px - 1023px) */
@@ -368,7 +416,7 @@
           .hero { padding: 80px 0; margin-top: 40px; }
           .section { padding: 70px 0; }
           .hero h1 { font-size: 3rem; }
-          .lead { font-size: 1.1rem; }
+          .lead { font-size: 1.1rem;  font-family: var(--font-body); }
           .stat-number { font-size: 2rem; }
           .hero-stats { gap: 30px; }
           .services-grid, .featured-grid, .active-grid { grid-template-columns: repeat(2, 1fr); }
@@ -384,6 +432,8 @@
           .values { max-width: 500px; padding-left: 15px; }
           .map-iframe { height: 350px; }
           .banner-section, .active-section, .cta-section, .about-section, .map-section { padding-left: 25px; padding-right: 25px; }
+          .about-profile { flex-direction: column; gap: 20px; }
+          .about-profile-card, .about-profile-image { height: auto; min-height: 300px; }
         }
 
         /* Mobile (max-width: 767px) - Combined for slider */
@@ -393,8 +443,8 @@
           .banner-section, .active-section, .cta-section, .about-section { padding: 60px 15px; }
           .map-section { padding: 60px 15px; }
           .section { padding: 60px 0; }
-          .hero h1 { font-size: 2.5rem; }
-          .lead { font-size: 1rem; }
+          .hero h1 { font-size: 2.5rem; font-family: var(--font-heading); }
+          .lead { font-size: 1rem; font-family: var(--font-body); }
           .stat-number { font-size: 2rem; }
           .hero-stats { gap: 25px; flex-direction: column; }
           .services-grid, .featured-grid, .active-grid { grid-template-columns: 1fr; gap: 25px; }
@@ -428,8 +478,8 @@
             display: block;
           }
           .nav-main.open + .nav-toggle {
-    display: none;
-  }
+            display: none;
+          }
           .nav-main a { 
             font-size: 1.1rem; 
             padding: 10px 0; 
@@ -449,17 +499,15 @@
             background: var(--accent-pink); 
             transition: 0.3s; 
           }
-       .nav-toggle.open span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-
-.nav-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
+          .nav-toggle.open span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+          }
+          .nav-toggle.open span:nth-child(2) {
+            opacity: 0;
+          }
+          .nav-toggle.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+          }
           .top-bar-content { flex-direction: column; gap: 10px; text-align: center; }
           .contact-info span { margin-right: 0; display: block; }
           .top-bar-links { gap: 15px; }
@@ -471,12 +519,14 @@
           .service-card, .featured-card, .active-card { padding: 25px 20px; }
           .active-grid { max-width: none; margin: 0; }
           .banners-grid { margin: 0; }
+          .about-profile { flex-direction: column; gap: 20px; }
+          .about-profile-card, .about-profile-image { height: auto; min-height: 300px; }
         }
 
         /* Mobile Medium: Small screens (481px - 575px) - Override if needed */
         @media (min-width: 481px) and (max-width: 575px) {
-          .hero h1 { font-size: 2.2rem; }
-          .lead { font-size: 0.95rem; }
+          .hero h1 { font-size: 2.2rem; font-family: var(--font-heading); }
+          .lead { font-size: 0.95rem; font-family: var(--font-body); }
           .stat-number { font-size: 1.8rem; }
           .hero-stats { gap: 20px; }
           .services-grid, .featured-grid, .active-grid { gap: 20px; }
@@ -492,32 +542,34 @@
           .hero-actions { flex-direction: column; gap: 10px; width: 100%; }
           .button { width: 100%; padding: 12px 20px; }
           .service-card, .active-card, .featured-card { padding: 15px; margin: 0 5px; }
-          .service-title, .active-title { font-size: 1.3rem; }
+          .service-title, .active-title { font-size: 1.3rem; font-family: var(--font-heading); }
           .about-badges .badge { padding: 8px 16px; font-size: 0.9rem; }
           .values { max-width: 350px; padding-left: 10px; gap: 10px; }
           .values li { font-size: 0.9rem; }
           .banner-section, .active-section, .cta-section, .about-section { padding: 50px 15px; }
           .map-section { padding: 50px 15px; }
           .map-container { padding: 15px; }
-          .map-card h3 { font-size: 1.3rem; }
+          .map-card h3 { font-size: 1.3rem; font-family: var(--font-heading); }
           .map-iframe { height: 250px; }
           .contact-actions { flex-direction: column; gap: 10px; }
           .footer-inner { grid-template-columns: 1fr; gap: 30px; }
-          .footer-section h4 { font-size: 1.1rem; }
-          .section h2 { font-size: 2.2rem; }
-          .subhead { font-size: 1rem; }
+          .footer-section h4 { font-size: 1.1rem; font-family: var(--font-heading); }
+          .section h2 { font-size: 2.2rem; font-family: var(--font-heading); }
+          .subhead { font-size: 1rem; font-family: var(--font-body); }
+          .about-profile { flex-direction: column; gap: 15px; }
+          .about-profile-card, .about-profile-image { height: auto; min-height: 300px; }
         }
 
         /* Mobile Small: Extra small screens (max-width: 480px) */
         @media (max-width: 480px) {
-          body { font-size: 15px; line-height: 1.5; }
+          body { font-size: 15px; line-height: 1.5; font-family: var(--font-body); }
           .container { padding: 0 15px; }
           .hero { padding: 40px 15px; margin-top: 10px; }
           .banner-section, .active-section, .cta-section, .about-section { padding: 40px 15px; }
           .map-section { padding: 40px 15px; }
           .section { padding: 40px 0; }
-          .hero h1 { font-size: 1.8rem; line-height: 1.1; margin-bottom: 15px; }
-          .lead { font-size: 0.9rem; margin: 0 0 20px; }
+          .hero h1 { font-size: 1.8rem; line-height: 1.1; margin-bottom: 15px; font-family: var(--font-heading); }
+          .lead { font-size: 0.9rem; margin: 0 0 20px; font-family: var(--font-body); }
           .stat-number { font-size: 1.5rem; }
           .stat-label { font-size: 0.8rem; }
           .hero-stats { gap: 15px; flex-direction: column; align-items: center; }
@@ -539,27 +591,27 @@
           .hero-actions { flex-direction: column; gap: 8px; width: 100%; }
           .button { width: 100%; padding: 10px 15px; font-size: 0.9rem; }
           .service-card, .active-card, .featured-card { padding: 12px; margin: 0 0; border-radius: 8px; }
-          .service-title, .active-title { font-size: 1.2rem; margin-bottom: 10px; }
+          .service-title, .active-title { font-size: 1.2rem; margin-bottom: 10px; font-family: var(--font-heading); }
           .service-desc, .active-desc, .featured-desc { font-size: 0.9rem; line-height: 1.4; }
           .service-btn { padding: 8px 16px; font-size: 0.9rem; width: 100%; display: block; text-align: center; }
-          .section h2 { font-size: 2rem; margin-bottom: 15px; }
-          .subhead { font-size: 1rem; margin: 0 0 30px; text-align: center; padding: 0 5px; }
-          .about-content p { font-size: 0.95rem; padding: 0 5px; }
+          .section h2 { font-size: 2rem; margin-bottom: 15px; font-family: var(--font-heading); }
+          .subhead { font-size: 1rem; margin: 0 0 30px; text-align: center; padding: 0 5px; font-family: var(--font-body); }
+          .about-content p { font-size: 0.95rem; padding: 0 5px; font-family: var(--font-body); }
           .about-badges { flex-direction: column; gap: 8px; }
           .badge { padding: 6px 12px; font-size: 0.85rem; width: 100%; text-align: center; box-sizing: border-box; }
           .values { max-width: 300px; padding-left: 8px; gap: 8px; margin: 20px auto; }
           .values li { font-size: 0.85rem; padding: 0 5px; }
-          .cta-section h2 { font-size: 2rem; }
-          .cta-section p { font-size: 1rem; padding: 0 5px; }
+          .cta-section h2 { font-size: 2rem; font-family: var(--font-heading); }
+          .cta-section p { font-size: 1rem; padding: 0 5px; font-family: var(--font-body); }
           .map-container { padding: 10px; margin: 0; border-radius: 8px; }
           .map-card { text-align: center; }
-          .map-card h3 { font-size: 1.2rem; }
+          .map-card h3 { font-size: 1.2rem; font-family: var(--font-heading); }
           .map-card p { font-size: 0.85rem; }
           .map-iframe { height: 200px; border-radius: 8px; }
           .contact-actions { flex-direction: column; gap: 8px; }
-          .note { font-size: 0.85rem; padding: 0 5px; }
+          .note { font-size: 0.85rem; padding: 0 5px; font-family: var(--font-body); }
           .footer-inner { gap: 20px; padding: 0 5px; }
-          .footer-section h4 { font-size: 1rem; }
+          .footer-section h4 { font-size: 1rem; font-family: var(--font-heading); }
           .footer-section p, .footer-section ul li { font-size: 0.9rem; }
           .social-links { justify-content: center; gap: 10px; }
           .newsletter-form { gap: 8px; flex-direction: column; }
@@ -568,10 +620,21 @@
           .footer-legal { flex-direction: column; gap: 5px; font-size: 0.8rem; }
           .progress { height: 8px; margin: 8px 0; }
           .progress-text { font-size: 0.8rem; }
+          .about-profile { flex-direction: column; gap: 15px; }
+          .about-profile-card, .about-profile-image { height: auto; min-height: 300px; }
         }
 
         /* Focus states */
         :focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
+
+        /* New rule for service card images */
+        .service-card img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -610,7 +673,7 @@
 
     <main>
         <section class="hero">
-            <h1>Building Tomorrow's Care Today</h1>
+            <h1>Delivering Healing at home</h1>
             <p class="lead">Compassionate, professional care at home—so you can live with dignity, independence, and joy. Our caregivers build authentic relationships and implement custom care plans that evolve with your needs.</p>
             <div class="hero-actions">
                 <a href="#services" class="button primary">Explore Services</a>
@@ -618,15 +681,12 @@
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <span class="stat-number">2</span>
-                    <span class="stat-label">Countries</span>
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Country</span>
                 </div>
+               
                 <div class="stat">
-                    <span class="stat-number">25+</span>
-                    <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">25+</span>
+                    <span class="stat-number">1+</span>
                     <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat">
@@ -636,13 +696,13 @@
             </div>
         </section>
 
-        <section class="banner-section section">
+        <!-- <section class="banner-section section">
             <div class="banners-grid">
                 <div class="banner-item">National Day of Joy Banner</div>
                 <div class="banner-item">Alzheimer’s & Dementia Care Banner</div>
                 <div class="banner-item">Careers Banner</div>
             </div>
-        </section>
+        </section> -->
 
         <section id="services" class="section container">
             <h2>Our Services</h2>
@@ -650,16 +710,19 @@
             <div class="services-grid">
                 <article class="service-card">
                     <h3 class="service-title">Palliative Care</h3>
+                    <img src="palliative.jpg" alt="Palliative Care">
                     <p class="service-desc">Pain and symptom management, emotional and spiritual support, caregiver respite and guidance.</p>
                     <a href="#palliative" class="service-btn">Learn More →</a>
                 </article>
                 <article class="service-card">
                     <h3 class="service-title">Post-Operative Care</h3>
+                    <img src="postoperative.jpg" alt="Post-Operative Care">
                     <p class="service-desc">Wound care and dressing changes, pain and medication management, mobility support and recovery monitoring.</p>
                     <a href="#post-op" class="service-btn">Learn More →</a>
                 </article>
                 <article class="service-card">
                     <h3 class="service-title">Dementia & Alzheimer’s Care</h3>
+                    <img src="dementia.jpg" alt="Dementia & Alzheimer’s Care">
                     <p class="service-desc">Safety-focused routines, cognitive support and gentle activities, personal assistance and behavioral management.</p>
                     <a href="#dementia" class="service-btn">Learn More →</a>
                 </article>
@@ -714,26 +777,22 @@
         </section>
 
         <section id="about" class="about-section section">
-            <h2>Building Excellence Since Our Founding</h2>
-            <div class="about-content">
-                <p>Our story begins with a leap of faith—leaving behind a home country to start anew in Barbados. The transition brought loneliness and sadness, but through working with the elderly we discovered purpose. Their wisdom, resilience, and gentle presence inspired healing and sparked a passion for caregiving.</p>
-                <p>One client, Mrs. Velveteen Greenidge, left an indelible mark. Her warmth and grace taught us that every day is a gift and that caring for others is a profound privilege. El Jestic Home Care Services was born from this spirit, and today our team delivers not only professional care—but also connection, laughter, and enriched lives.</p>
-                <p>We provide exceptional, compassionate, and personalized home health services that empower clients to live with dignity and independence in the comfort of their own homes. We deliver the highest quality of care, foster a supportive environment for clients and families, and promote overall well-being.</p>
-                <p>We treat every client with dignity, respect, and compassion, ensuring they can live joyfully and independently in the comfort of their own home.</p>
+            <div class="about-profile">
+                <div class="about-profile-card">
+                    <h3>Why I do what I do?</h3>
+                    <p>My journey in caregiving began with a personal experience of loss and a desire to give back. Seeing the impact of compassionate care on my loved ones inspired me to dedicate my life to supporting others in their time of need.</p>
+                    <h3>Our Story</h3>
+                    <p>My journey to Eljestic Home Care Services began with a leap of faith, leaving my home country to start a new life in Barbados. It was a difficult transition, filled with loneliness and moments of deep sadness as I grappled with homesickness and depression. I missed my family and the life I had known, and it felt like a part of me was missing.</p>
+                    <p>But a new chapter opened when I began working with the elderly. In their stories, their resilience, and their gentle wisdom, I found a new sense of purpose. My heart began to heal, and my perspective on life shifted. It was through them that I discovered the incredible joy and fulfillment that comes from serving others.</p>
+                    <p>One person, in particular, will forever hold a special place in my heart: Mrs. Velveteen Greenidge. She wasn’t just a client; she was a beacon of light in my life. Her warmth, her grace, and her unwavering spirit taught me more about life and love than I ever thought possible. She inspired me to see that every day is a gift and that the simple act of caring for another human being is a profound privilege. It was her memory that became the foundation for Eljestic Home Care Services.</p>
+                    <p>Today, my goal is to ensure that every individual we serve feels the same positive impact that Mrs. Greenidge had on me. We're not just here to provide care; we're here to build connections, share laughter, and enrich lives.</p>
+                    <p>Our dedicated team at Eljestic is committed to delivering the highest quality of care. We believe in treating every client with the dignity, respect, and compassion they deserve. We are here to be a source of comfort, support, and friendship, ensuring that you or your loved one can live with joy and independence in the comfort of your home.</p>
+                    <p>We look forward to welcoming you into the Eljestic family.</p>
+                </div>
+                <div class="about-profile-image">
+                    <img src="Profile.jpg" alt="Profile Image">
+                </div>
             </div>
-            <div class="about-badges">
-                <div class="badge">Compassion First</div>
-                <div class="badge">Excellence</div>
-                <div class="badge">Empowerment</div>
-            </div>
-            <ul class="values">
-                <li><strong>Compassion:</strong> We treat every individual with kindness and empathy.</li>
-                <li><strong>Integrity:</strong> We operate with the highest ethical standards.</li>
-                <li><strong>Excellence:</strong> We strive for the best in all areas of care.</li>
-                <li><strong>Empowerment:</strong> We help clients make informed decisions.</li>
-                <li><strong>Respect:</strong> We honor individuality and dignity.</li>
-                <li><strong>Collaboration:</strong> We work closely with families and healthcare professionals.</li>
-            </ul>
         </section>
 
         <section class="cta-section section">
